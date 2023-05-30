@@ -1,35 +1,370 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>Start Parcel Project With Tailwindcss</title>
-        <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
-		<link rel="stylesheet" href="./css/app.scss" />
-		<script type="module" src="./js/app.js"></script>
-	</head>
-	<body class="min-h-screen flex flex-col">
-		<header class="bg-gray-50 shadow-md">
-			<div class="container">
-				<div class="flex items-center justify-between py-3">
+<html>
 
-					<a href="/" class="flex items-center">
-						<img src="./img/favicon.png" class="-mt-1.5 max-w-[60px]" alt="">
-						<span class="text-[#D7EFF4] text-4xl font-semibold">tarter</span>
-					</a>
+<head>
 
-					<div class="flex gap-4">
-						<button class="btn">Log In</button>
-						<button class="btn btn-o">Sign Up</button>
-					</div>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="icon" href="favicon.png"> -->
+    <title>Автохолдинг — Официальный дилер JETOUR в Краснодаре</title>
+<!--     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+ -->
+    <!-- <link rel="shortcut icon" href="./img/favicon.png" type="image/png"> -->
+    <link data-n-head="ssr" rel="icon" type="image/x-icon" href="./img/favicon.ico">
+	<link rel="stylesheet" href="./css/app.scss" />
+	<script type="module" src="./js/app.js"></script>
+	<script type="module">
+		window.jQuery = require('jquery');
+		window.$ = require('jquery');
+	</script>
 
-				</div>
-			</div>
-		</header>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-		<main class="flex-grow flex items-center justify-center">MAIN CONTENT</main>
-		
-		<footer class="py-24 text-center bg-gray-800 text-white">
-			FOOTER
-		</footer>
-	</body>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="bg">
+            <div class="logo_wrap">
+                <div class="logo"><img src="img/jetour.png"></div>
+            </div>
+            <div class="top_addr">г. Краснодар, Тургеневское шоссе, 20 Д</div>
+            <a href="tel:+78619920202" class="top_phone">+7 (861) 992-02-02</a>
+
+            <a class="popup button black" href="#form_popup" data-title="Закакзать звонок" data-comment=""
+               data-form_name="callback" data-form_type_model_name="" data-form_diler="">
+                Закакзать звонок
+            </a>
+
+            <!--div class="m_button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div-->
+        </div>
+    </div>
+</header>
+
+
+<div class="b1">
+    <div class="container">
+        <div class="rows">
+            <div class="title1">
+                <font>Новые автомобили по цене заводов изготовителей!</font><br>
+                <span>Уже доступны для бронирования в Автохолдинге!</span>
+            </div>
+            <a class="popup button white" href="#form_popup" data-title="Узнать подробнее" data-comment=""
+               data-form_name="callback" data-form_type_model_name="" data-form_diler="">
+                Узнать подробнее
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="car">
+    <div class="container">
+
+        <div class="wrap">
+            <div class="row1">
+                <div class="col1">
+                    <div class="text">Объем двигателя (л.) <b>1,6</b></div>
+                    <div class="text">Крутящий момент (H.м) <b>290</b></div>
+                    <div class="text">Коробка передач <b>7DCT</b></div>
+                    <div class="text">Тип привода <b>Передний</b></div>
+                </div>
+                <img src="./img/x90Plus/16739286872103.png">
+                <a class="popup compl" href="#form_popup" data-title="Подобрать комплектацию" data-comment=""
+                   data-form_name="callback" data-form_type_model_name="" data-form_diler="">
+                    Подобрать комплектацию
+                </a>
+            </div>
+
+            <div class="row2">
+                <a class="popup" href="#form_popup" data-title="Стоимость от # ### ### ₽*" data-comment=""
+                   data-form_name="callback" data-form_type_model_name="" data-form_diler="">
+                    Стоимость от # ### ### ₽*
+                </a>
+                <a class="popup" href="#form_popup" data-title="Выгодный трейд-ин" data-comment=""
+                   data-form_name="callback" data-form_type_model_name="" data-form_diler="">
+                    Выгодный трейд-ин
+                </a>
+                <a class="popup" href="#form_popup" data-title="Выгодный кредит" data-comment=""
+                   data-form_name="callback" data-form_type_model_name="" data-form_diler="">
+                    Выгодный кредит
+                </a>
+            </div>
+
+
+            <div class="buttons">
+                <a class="popup button white" href="#form_popup" data-title="Узнать цену" data-comment=""
+                   data-form_name="callback" data-form_type_model_name="" data-form_diler="">
+                    Узнать цену
+                </a>
+                <a class="popup button black" href="#form_popup" data-title="Рассчитать кредит" data-comment=""
+                   data-form_name="callback" data-form_type_model_name="" data-form_diler="">
+                    Рассчитать кредит
+                </a>
+                <a class="popup button gray" href="#form_popup" data-title="Записаться на тест-драйв" data-comment=""
+                   data-form_name="callback" data-form_type_model_name="" data-form_diler="">
+                    Записаться на тест-драйв
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="kompl">
+    <div class="container">
+        <h2>Jetour <b>DASHING</b></h2>
+        <div class="row1">
+            <img src="./img/dashing/c1b.png">
+            <div class="text">
+                <div>Мощность: <b>197 л.с.</b></div>
+                <div>Расход: <b>8 л.</b></div>
+                <div>Макс.скорость: <b>190 км/ч</b></div>
+                <div>Колесная база: <b>2850 мм</b></div>
+            </div>
+            <div class="buttons">
+                <a class="popup button black" href="#form_popup" data-title="Узнать цену по акци" data-comment=""
+                   data-form_name="callback" data-form_type_model_name="" data-form_diler="">
+                    Узнать цену по акци
+                </a>
+                <a class="popup button white" href="#form_popup" data-title="Рассчитать кредит" data-comment=""
+                   data-form_name="callback" data-form_type_model_name="" data-form_diler="">
+                    Рассчитать кредит
+                </a>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="items">
+                                    <a href="javascript: ;" class="item"
+                       data-attr='{
+                           "img": "./img/dashing/c2b.png",
+                           "char": "<div>Мощность <b>147 л.с</b></div>\\b<div>Расход <b>6,6 л.</b></div>\\b<div>Двигатель <b>бензиновый</b></div>\\b"
+                       }' data-img='./img/dashing/c2b.png'>
+                        <img loading="lazy" class="lazyload" data-src="./img/dashing/c2b.png">
+                    </a>
+                                        <a href="javascript: ;" class="item"
+                       data-attr='{
+                           "img": "./img/dashing/c3b.png",
+                           "char": "<div>Мощность <b>147 л.с</b></div>\\b<div>Расход <b>6,6 л.</b></div>\\b<div>Двигатель <b>бензиновый</b></div>\\b"
+                       }' data-img='./img/dashing/c3b.png'>
+                        <img loading="lazy" class="lazyload" data-src="./img/dashing/c3b.png">
+                    </a>
+                                        <a href="javascript: ;" class="item"
+                       data-attr='{
+                           "img": "./img/dashing/c4b.png",
+                           "char": "<div>Мощность <b>147 л.с</b></div>\\b<div>Расход <b>6,6 л.</b></div>\\b<div>Двигатель <b>бензиновый</b></div>\\b"
+                       }' data-img='./img/dashing/c4b.png'>
+                        <img loading="lazy" class="lazyload" data-src="./img/dashing/c4b.png">
+                    </a>
+                                        <a href="javascript: ;" class="item"
+                       data-attr='{
+                           "img": "./img/dashing/c5b.png",
+                           "char": "<div>Мощность <b>147 л.с</b></div>\\b<div>Расход <b>6,6 л.</b></div>\\b<div>Двигатель <b>бензиновый</b></div>\\b"
+                       }' data-img='./img/dashing/c5b.png'>
+                        <img loading="lazy" class="lazyload" data-src="./img/dashing/c5b.png">
+                    </a>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="konkurenti">
+    <div class="container">
+        <div class="wrap">
+
+            <div class="row">
+                <h2>Улучшим предложение конкурентов!</h2>
+                <p>У Вас уже есть предложение от другого дилера?<br>Сделаем лучше! Оставьте Ваши контакты и в ближайшее
+                    время мы перезвоним!</p>
+
+                <form action="mail.php" method="POST" class="CKiForm" id="cred_form" data-callkeeper_name=""
+                      data-flash-title="">
+                    <input name="title" type="hidden" value="">
+                    <input name="comment" type="hidden" value="">
+                    <input name="form_name" type="hidden" value="">
+                    <input name="form_type_model_name" type="hidden" value="">
+                    <input name="form_diler" type="hidden" value="">
+
+                    <div class="form-group">
+                        <input type="tel" name="phone" class="nacc form-control" placeholder="Ваш номер телефона"
+                               data-callkeeper="tel" data-flash="phone" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="form-control  CKFormTrigger button black FlashFormSubmit">
+                            Получить предложение
+                        </button>
+                    </div>
+                    <label class="agree_field">
+                        <input type="checkbox" name="agree" value="1" checked="checked">
+                        <!-- <a target="_blank" href="./policy.pdf">Согласие</a> на обработку персональных данных -->
+                    </label>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="gallery">
+    <div class="container">
+        <h2><b>Jetour</b> — кроссоверы и внедорожники для путешествий</h2>
+        <div class="filter">
+            <a href="#" class="ext active" data-target=".gallery .items1">Экстерьер</a>
+            <a href="#" class="int" data-target=".gallery .items2">Интерьер</a>
+        </div>
+
+        <div class="items items1 show">
+            <div class="row row1">
+                <div class="ga ga1"></div>
+                <div class="ga ga2"></div>
+            </div>
+            <div class="row row2">
+                <div class="ga ga3"></div>
+                <div class="ga ga4"></div>
+                <div class="ga ga5"></div>
+            </div>
+            <div class="row row3">
+                <div class="ga ga6"></div>
+                <div class="ga ga7"></div>
+            </div>
+            <div class="row row4">
+                <div class="ga ga8"></div>
+                <div class="ga ga9"></div>
+            </div>
+        </div>
+        <div class="items items2">
+            <div class="row row1">
+                <div class="ga ga1"></div>
+                <div class="ga ga2"></div>
+            </div>
+            <div class="row row2">
+                <div class="ga ga3"></div>
+                <div class="ga ga4"></div>
+                <div class="ga ga5"></div>
+            </div>
+            <div class="row row3">
+                <div class="ga ga6"></div>
+                <div class="ga ga7"></div>
+            </div>
+            <div class="row row4">
+                <div class="ga ga8"></div>
+                <div class="ga ga9"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="contact" id="contacts">
+    <div class="container">
+        <h2>Наши <b>Контакты</b></h2>
+        <div class="wrap">
+            <div class="column">
+
+                <div class="logos">
+                    <div class="logo"><img src="img/jetour.png"></div>
+                </div>
+
+                <div class="address">
+                    г. Краснодар, Тургеневское шоссе, 20 Д
+                    <span>
+                            ИНН 2308194419<br>
+                            ОГРН 1122308011880
+                        </span>
+                </div>
+                <div class="worktime">Ежедневно с 08:00 до 20:00</div>
+                <a href="tel:+78619920202" class="phone">+7 (861) 992-02-02</a>
+                <p>Остались вопросы? Мы перезвоним!</p>
+                <a class="popup button black" href="#form_popup"
+                   data-title="Заказать звонок"
+                   data-comment=""
+                   data-form_name="callback"
+                   data-form_type_model_name=""
+                   data-form_diler="">
+                    Заказать звонок
+                </a>
+            </div>
+            <div id="map1"></div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<footer>
+    <div class="container">
+
+        <div class="row">
+            <a class="disclamer_switch switch" href="#" target="_blank">Подробные условия акций</a>
+        </div>
+        <div class="disclamer">
+            <p>* Данный сайт не является публичной офертой. Подробные условия уточняйте в отделе продаж</p>
+        </div>
+
+
+    </div>
+</footer>
+
+
+<div id="form_popup">
+    <form action="mail.php" method="POST" class="CKiForm popup_container" data-callkeeper_name=""
+          data-flash-title="">
+        <input name="title" type="hidden" value="">
+        <input name="comment" type="hidden" value="">
+        <input name="form_name" type="hidden" value="">
+        <input name="form_type_model_name" type="hidden" value="">
+        <input name="form_diler" type="hidden" value="">
+
+        <h2 class="form_title">Заголовок</h2>
+        <div class="form-group">
+            <input type="tel" name="phone" class="nacc form-control" placeholder="Ваш телефон" data-callkeeper="tel"
+                   data-flash="phone" autocomplete="off">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="form-control  CKFormTrigger button FlashFormSubmit">
+                Получить предложение
+            </button>
+        </div>
+        <label class="agree_field">
+            <input type="checkbox" name="agree" value="1" checked="checked">
+            <!-- Я согласен <a target="_blank" href="./policy.pdf">условиями обработки персональных данных</a> -->
+        </label>
+    </form>
+</div>
+
+
+<script>
+    if ('loading' in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach(img => {
+            img.src = img.dataset.src;
+        });
+    } else {
+        // Dynamically import the LazySizes library
+        const script = document.createElement('script');
+        script.src =
+            'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js';
+        document.body.appendChild(script);
+    }
+</script>
+
+
+</body>
+
 </html>
