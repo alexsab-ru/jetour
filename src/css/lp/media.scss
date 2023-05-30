@@ -449,6 +449,10 @@
         display: none;
     }
 
+    header .top_dealer {
+        font-size: 16px;
+    }
+
     header a {
     }
 
@@ -487,10 +491,12 @@
     }
 
     .b1 {
-        padding-top: 200px;
+        padding-top: 160px;
         height: 673px;
-        background: #77c3f9 url("../img/dashing/banner_mob.jpg") 50% 30% / cover no-repeat;
+        background: #77c3f9 url("../img/dashing/banner_mob.jpg") no-repeat;
         background-size: 100%;
+        background-size: cover;
+        background-position: 50% 40%;
     }
 
     .b1 .container {
@@ -501,7 +507,7 @@
 
     .b1 .title1 {
         font-size: 22px;
-        color: #000000;
+        // color: #000000;
     }
 
     .timer_block {

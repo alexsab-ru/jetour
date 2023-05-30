@@ -12,7 +12,7 @@
     "*.html",
     "*.js",
     "!build.js",
-    "!CNAME"
+    "!docs/CNAME"
   ],
   "parcelBuildClean": [
     "docs",

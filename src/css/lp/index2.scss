@@ -65,15 +65,23 @@ header .logo_wrap .logo {
 }
 
 header .logo_wrap .logo img {
-    height: 40px;
+    max-height: 40px;
 }
 
-header .logo_wrap .logo:nth-child(1) {
-    // border-right: 1px solid #99aab7;
-    padding: 20px 0;
+header .logo_wrap .logo:nth-child(1 ) {
+    border-right: 1px solid #99aab7;
+    align-items: center;
+    display: flex;
+    // padding: 20px 0;
 }
 
 header .top_addr {
+}
+
+header .top_dealer {
+    font-size: 24px;
+    align-items: center;
+    display: flex;
 }
 
 header .top_phone {
@@ -140,8 +148,7 @@ header .button.black:hover {
 
 .b1 .title1 {
     font-size: 32px;
-    // color: #ffffff;
-    color: #000000;
+    color: #ffffff;
     font-weight: 300;
     line-height: 150%;
 }
@@ -605,7 +612,7 @@ header .button.black:hover {
     display: flex;
     align-items: center;
     height: 656px;
-    background: url("../img/dashing/16732319578528.jpg") center top no-repeat;
+    background: url("../img/dashing/konkurenti.jpg") center top no-repeat;
     background-size: cover;
 }
 
@@ -614,9 +621,11 @@ header .button.black:hover {
 }
 
 .konkurenti .row h2 {
+    color: #ffffff;
 }
 
 .konkurenti .row p {
+    color: #ffffff;
     font-size: 19px;
     line-height: 125%;
     margin-bottom: 36px;
