@@ -1,8 +1,4 @@
 import $ from 'jquery';
-// window.jQuery = require('jquery');
-// window.$ = require('jquery');
-// window.jQuery = $;
-// window.$ = $;
 import 'slick-carousel';
 
 import './lp/jquery.fancybox.min.js';
