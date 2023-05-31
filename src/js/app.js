@@ -1,5 +1,8 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 import 'slick-carousel';
+
+// window.jQuery = $;
+// window.$ = $;
 
 import './lp/jquery.fancybox.min.js';
 import './lp/jquery.inputmask.bundle.min.js';
