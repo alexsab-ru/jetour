@@ -250,9 +250,22 @@ header .button.black:hover {
     color: white;
 }
 
-.car .container {
-    background: url("/img/logo.png") center top no-repeat;
+.car .container.dashing:before {
+    content: "";
+    background: url("/img/dashing/dashing.png") 80% top no-repeat;
+    background-size: 90%;
     padding-top: 141px;
+    filter: invert(1);
+    display: block;
+}
+
+.car .container.x90Plus:before {
+    content: "";
+    background: url("/img/x90Plus/x90plus.png") 80% top no-repeat;
+    background-size: 90%;
+    padding-top: 141px;
+    filter: invert(1);
+    display: block;
 }
 
 .car .wrap {
@@ -602,7 +615,7 @@ header .button.black:hover {
 
 .konkurenti {
     margin-top: 90px;
-    margin-bottom: 130px;
+    // margin-bottom: 130px;
 }
 
 .konkurenti .container {
