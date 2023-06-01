@@ -247,7 +247,7 @@ header .button.black:hover {
 
 .car {
     margin-top: 100px;
-    color: white;
+    color: #ffffff;
 }
 
 .car .container.dashing:before {
@@ -292,7 +292,7 @@ header .button.black:hover {
 
 .car .row1 .col1 .text {
     font-size: 12px;
-    color: #919191;
+    color: #dcdcdc;
     padding-top: 7px;
     padding-bottom: 8px;
     margin-top: 0px;
@@ -301,7 +301,7 @@ header .button.black:hover {
 }
 
 .car .row1 .col1 .text b {
-    color: white;
+    color: #ffffff;
     font-size: 33px;
     font-weight: bold;
     display: block;
@@ -320,7 +320,7 @@ header .button.black:hover {
     right: 60px;
     top: 58px;
     z-index: 4;
-    color: white;
+    color: #ffffff;
     background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAflBMVEXzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmADzmAD4xnH60pD858T5y3/85sL4wWX847r4wGL85Lz5ynz86MX60Y786Mf4x3TzmAH///9wWJ80AAAAGXRSTlMAQpnb+UMovz/y8AHHRJrc2N2iR0Yp+vTXmtAgewAAAAFiS0dEKcq3hSQAAAAHdElNRQfnBQsLNDU5uFHeAAAAi0lEQVQY022Q6xaCIBCEJyW8gJhGGd216/s/YSq7WB3nz3wMu5xdgEGLKBYijpZgycSREumTNHNBWTrW5O5LeV+ntPuRVigI95wVMESHI4FBybens/cSIrxyuY4mME3QdhStOLndvVeoKXk8CWqsiV5vAjs36v9Cm/m1+7rQqyV/mLKm2jY7Y9Vw+gDIGhhbA1558QAAAABJRU5ErkJggg==") right 2px top 1px no-repeat;
     padding-right: 30px;
     transition: all 0.3s;
@@ -370,7 +370,7 @@ header .button.black:hover {
 }
 
 .car .row2 a {
-    color: white;
+    color: #ffffff;
     display: block;
     display: flex;
     align-items: center;
@@ -379,7 +379,7 @@ header .button.black:hover {
 
 .car .row2 a:before {
     content: '';
-    background: #f39800 url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQsMCjuainEhAAABdklEQVQ4y52SPSxDURiGn3tbVBE/iUXEwMJmsIgIaweJwVYiMTMZGJtIsFlMBosFq4REpIOFRCI1MUnE74KraTSptq+h7Y1W69zrOcvJe8+Tc7/vO4gaa0ZXOlZfre+1tGWVGPEjxlxtXz0a14Q3ca0oXWtQIW1Jkq5UZxI3itq80KRS7t3bf4s7kqQT9apf5ypnuLa4JelJc7K0KEnKKuMuKfHzrCVcAoxyzzOfhBnjjjTldHCJezxIM5sMEQCyvJAnRCdpXhGVWHTxxjqHAOhQfhkQwiaCXyIANp++xVxBzPkWmwrN8cYpj8V2WRwBWErSYpDOmMKmEWEBEKaeC5Q09PBGaEEfFWncfOMIDcR/x7axujuWAMiwyoObpsxinrcqqW2ucVZt1WJzjV9000GMHqziQNoJsetlHFmiXJB3x/FOEsy/WsLRuxw5cjQt5PnlQKu76yx0x7taQgWx8b/inm/xACBIlEcmaCVjFGwsEqxwC/ANC78MO+FmZS0AAAAASUVORK5CYII=) 10px center no-repeat;
+    background: #628788 url(data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfnBQsMCjuainEhAAABdklEQVQ4y52SPSxDURiGn3tbVBE/iUXEwMJmsIgIaweJwVYiMTMZGJtIsFlMBosFq4REpIOFRCI1MUnE74KraTSptq+h7Y1W69zrOcvJe8+Tc7/vO4gaa0ZXOlZfre+1tGWVGPEjxlxtXz0a14Q3ca0oXWtQIW1Jkq5UZxI3itq80KRS7t3bf4s7kqQT9apf5ypnuLa4JelJc7K0KEnKKuMuKfHzrCVcAoxyzzOfhBnjjjTldHCJezxIM5sMEQCyvJAnRCdpXhGVWHTxxjqHAOhQfhkQwiaCXyIANp++xVxBzPkWmwrN8cYpj8V2WRwBWErSYpDOmMKmEWEBEKaeC5Q09PBGaEEfFWncfOMIDcR/x7axujuWAMiwyoObpsxinrcqqW2ucVZt1WJzjV9000GMHqziQNoJsetlHFmiXJB3x/FOEsy/WsLRuxw5cjQt5PnlQKu76yx0x7taQgWx8b/inm/xACBIlEcmaCVjFGwsEqxwC/ANC78MO+FmZS0AAAAASUVORK5CYII=) 10px center no-repeat;
     width: 48px;
     height: 48px;
     display: block;
@@ -635,11 +635,9 @@ header .button.black:hover {
 }
 
 .konkurenti .row h2 {
-    color: #ffffff;
 }
 
 .konkurenti .row p {
-    color: #ffffff;
     font-size: 19px;
     line-height: 125%;
     margin-bottom: 36px;
@@ -985,13 +983,13 @@ header .button.black:hover {
 }
 
 #contacts .logos img {
+    max-width: 200px;
 }
 
 #contacts .logos .logo:nth-child(1) {
-    // border-right: 1px solid #99aab7;
-    // padding-right: 17px;
-    // margin-right: 17px;
-    padding: 10px 0;
+    border-right: 1px solid #99aab7;
+    padding-right: 17px;
+    margin-right: 17px;
 }
 
 #contacts .logos .logo:nth-child(1) img {
@@ -1025,7 +1023,7 @@ header .button.black:hover {
 #contacts .column .phone {
     font-size: 20px;
     font-weight: bold;
-    color: #f39800;
+    color: #628788;
     height: 40px;
     display: flex;
     align-items: center;

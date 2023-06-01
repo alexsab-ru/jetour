@@ -3,10 +3,10 @@ function initYandexMap() {
 	{
 		ymaps.ready(function () {
 			var _ball_bg = './img/map.balloon.png';
-			var _ball_Offset = [-28, -70];
-			var _ball_Size = [56, 70];
+			var _ball_Offset = [-21, -58];
+			var _ball_Size = [43, 62];
 			var myMap = new ymaps.Map('map1', {
-				center: [45.017382, 38.937656],
+				center: [45.017382, 38.936556],
 				zoom: 16,
 				controls: ["zoomControl"]
 			}, {
