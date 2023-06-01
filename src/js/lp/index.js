@@ -96,68 +96,72 @@ function initYandexMapWaitOnHover()
 }//end_ func
 
 
-function initFancy()
-{
+let firstInitForm = false;
 
-	$(".fancybox-gallery").fancybox(
-	{
-		theme : 'light',
-		helpers : { thumbs : true },
-		openEffect  : 'fade',
-		closeEffect : 'fade',
-		nextEffect  : 'fade',
-		prevEffect  : 'fade',
-		'showNavArrows' :   true
-	});
+$(".fancybox-gallery").fancybox(
+{
+	theme : 'light',
+	helpers : { thumbs : true },
+	openEffect  : 'fade',
+	closeEffect : 'fade',
+	nextEffect  : 'fade',
+	prevEffect  : 'fade',
+	'showNavArrows' :   true
+});
 
 //	$(".popup").click( function()
-	$(document).on("click",".popup",function(){
-		var _form_id = $(this).attr('href');
+$(document).on("click",".popup",function(){
+	var _form_id = $(this).attr('href');
 
-		var _form_title = $(this).data('title');
-		var _form_comment = $(this).data('comment');
-		var _form_name = $(this).data('form_name');
-		var _form_type_model_name = $(this).data('form_type_model_name');
-		var _form_diler = $(this).data('form_diler');
+	var _form_title = $(this).data('title');
+	var _form_comment = $(this).data('comment');
+	var _form_name = $(this).data('form_name');
+	var _form_type_model_name = $(this).data('form_type_model_name');
+	var _form_diler = $(this).data('form_diler');
 
-		var _select_val = $(this).attr('_select_val');
+	var _select_val = $(this).attr('_select_val');
 
-		$(".popup_container .form_title").html(_form_title);
+	$(".popup_container .form_title").html(_form_title);
 
-		$.fancybox.open( $(_form_id).html(),
+	// console.log($(_form_id).html());
+
+	$.fancybox.open( $(_form_id).html(),
+	{
+		padding: 0,
+		content: $(_form_id).html(),
+	//	modal: true,
+		scrolling: "no",
+		margin: 5,
+		/*closeBtn: false,*/
+		afterShow: function()
 		{
-			padding: 0,
-			content: $(_form_id).html(),
-		//	modal: true,
-			scrolling: "no",
-			margin: 5,
-			/*closeBtn: false,*/
-			afterShow: function()
-			{
 
 
-				$(".popup_container input[name='title']").val(_form_title);
-				$(".popup_container input[name='comment']").val(_form_comment);
-				$(".popup_container input[name='form_name']").val(_form_name);
-				$(".popup_container input[name='form_type_model_name']").val(_form_type_model_name);
-				$(".popup_container input[name='form_diler']").val(_form_diler);
-				$(".popup_container").attr("data-callkeeper_name",_form_title);
-				$(".popup_container").attr('data-flash-title',_form_title);
+			$(".popup_container input[name='title']").val(_form_title);
+			$(".popup_container input[name='comment']").val(_form_comment);
+			$(".popup_container input[name='form_name']").val(_form_name);
+			$(".popup_container input[name='form_type_model_name']").val(_form_type_model_name);
+			$(".popup_container input[name='form_diler']").val(_form_diler);
+			$(".popup_container").attr("data-callkeeper_name",_form_title);
+			$(".popup_container").attr('data-flash-title',_form_title);
 
 
 
 
-				_init_inputmask();
-
-				if ( typeof(_select_val)!="undefined" ) $('.popup_container select').val( _select_val );
-
-
-
-			}
-		} );
-		return false;
-	});
-}//end_ func
+			
+			if ( typeof(_select_val)!="undefined" ) $('.popup_container select').val( _select_val );
+			
+			
+			
+		}
+	} );
+	_init_inputmask();
+	if(!firstInitForm){
+		initForm()
+		firstInitForm = true;
+	}
+	return false;
+});
 
 function _init_inputmask()
 {
@@ -216,9 +220,10 @@ function initForm()
 
 	_init_inputmask();
 
-	$( "body" ).on( "submit", "form:not(#ckWrapper form)", function()
+	$( "body" ).on( "submit", "form:not(#ckWrapper form)", function(e)
 		// $( "body" ).on( "submit", "form", function()
 	{
+		e.preventDefault()
 		var l_form_object = $(this);
 		$("input,textarea,select",this).closest(".form-group").removeClass("has-danger");
 		var l_err = false;
@@ -301,7 +306,7 @@ function sendCallTouchData( e_vars )
     var l_phone = "";
     var l_name  = "";
     var l_title = "";
-    l_calltouch_route_key = "undefined";
+    var l_calltouch_route_key = "undefined";
 
     try
     {
@@ -693,8 +698,8 @@ $( function()
 	init_agree();
 	anchor_click();
 	initYandexMapWaitOnHover();
-	initFancy();
-	initForm();
+	// initFancy();
+	// initForm();
 	init_resp_table();
 	init_row_toggle();
 	initMenu();
