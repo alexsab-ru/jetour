@@ -356,7 +356,8 @@ header .button.black:hover {
 
 .car .row2 {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: space-around;
     margin: 0 60px;
     padding: 20px 0;
     margin-top: 29px;

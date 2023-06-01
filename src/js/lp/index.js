@@ -240,9 +240,9 @@ function initForm()
 			return false;
 		}//end_ if
 
-		_form_title = $(this).data('title');
-		_form_name = $(this).data('form_name');
-		_form_type_model_name = $(this).data('form_type_model_name');
+		var _form_title = $(this).data('title');
+		var _form_name = $(this).data('form_name');
+		var _form_type_model_name = $(this).data('form_type_model_name');
 
 
 		// if (typeof (window.yaCounter93383415) != "undefined") {
@@ -265,7 +265,7 @@ function initForm()
 
 
 
-		$.post( "mail.php", $(this).serialize()+"&form="+this.id+"&form_title="+_form_title, function( data )
+		$.post( "https://alexsab.ru/lead/test/", $(this).serialize()+"&form="+this.id+"&form_title="+_form_title, function( data )
 		{
 		console.log('form_site :'+ window.location.href);
 		console.log('form_name :'+ _form_name);
