@@ -84,7 +84,7 @@ a:hover {
 }
 
 .fancybox-close {
-/*    background: url("../img/bg_close.png") 50% 50% no-repeat !important;*/
+/*    background: url("/img/bg_close.png") 50% 50% no-repeat !important;*/
     color: black;
     width: 22px !important;
     height: 22px !important;
@@ -367,7 +367,7 @@ form .form-group select {
     appearance: none;
     -moz-appearance: none; /* Firefox */
     -webkit-appearance: none; /* Safari and Chrome */
-    background: url("../img/ico_select.png") 95% 50% no-repeat #ffffff;
+    background: url("/img/ico_select.png") 95% 50% no-repeat #ffffff;
     outline: none;
 }
 
@@ -546,7 +546,7 @@ form .form-group button:hover {
 
 #map1 {
     overflow: hidden;
-    background: url("../img/map_bg.jpg") center top no-repeat;
+    background: url("/img/map_bg.jpg") center top no-repeat;
     background-size: cover !important;
     position: static;
     width: 100%;

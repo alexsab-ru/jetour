@@ -1,24 +1,17 @@
 {
   "name": "start-parcel-project-with-tailwindcss",
   "version": "1.0.0",
-  "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --emptyOutDir",
     "preview": "vite preview"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
-    "glob": "^10.2.6",
     "postcss": "^8.4.23",
-    "posthtml-img-autosize": "^0.1.6",
-    "posthtml-modules": "^0.9.1",
     "sass": "^1.62.1",
     "tailwindcss": "^3.3.1",
     "vite": "^4.3.9"
-  },
-  "dependencies": {
-    "slick-carousel": "^1.8.1"
   }
 }
