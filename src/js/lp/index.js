@@ -148,11 +148,11 @@ $(document).on("click",".popup",function(){
 
 
 
-			
+
 			if ( typeof(_select_val)!="undefined" ) $('.popup_container select').val( _select_val );
-			
-			
-			
+
+
+
 		}
 	} );
 	_init_inputmask();
@@ -251,14 +251,14 @@ function initForm()
 
 
 		// if (typeof (window.yaCounter93383415) != "undefined") {
-        //     if (typeof (window.ym) != "undefined") {
-        //         ym(93383415, 'reachGoal', 'lead');
-        //         console.log("[ym ok]");
-        //     } else {
-        //         yaCounter93383415.reachGoal('lead');
-        //         console.log("[yaCounter ok]");
-        //     }
-        // }
+		//     if (typeof (window.ym) != "undefined") {
+		//         ym(93383415, 'reachGoal', 'lead');
+		//         console.log("[ym ok]");
+		//     } else {
+		//         yaCounter93383415.reachGoal('lead');
+		//         console.log("[yaCounter ok]");
+		//     }
+		// }
 
 
 		var _form = this;
@@ -270,20 +270,37 @@ function initForm()
 
 
 
-		$.post( "https://alexsab.ru/lead/test/", $(this).serialize()+"&form="+this.id+"&form_title="+_form_title, function( data )
+		$.post( "https://alexsab.ru/lead/jetour/krasnodar/", $(this).serialize()+"&form="+this.id+"&form_title="+_form_title, function( data )
 		{
-		console.log('form_site :'+ window.location.href);
-		console.log('form_name :'+ _form_name);
-		console.log('form_type_model_name :'+ _form_type_model_name);
-		console.log('form_action :'+ 'send_form');
-		console.log('event :'+ 'event_ok');
+			console.log('form_site :'+ window.location.href);
+			console.log('form_name :'+ _form_name);
+			console.log('form_type_model_name :'+ _form_type_model_name);
+			console.log('form_action :'+ 'send_form');
+			console.log('event :'+ 'event_ok');
+			console.log('data :', data);
+			console.log('answer :', data.answer);
 
 			//ckForms.send( '#'+l_form_object.attr("name") );
-			$('form').trigger('reset');
+			if(data.answer == "OK") {
+				$('form').trigger('reset');
+				alert("Сообщение успешно отправлено");
+			} else if(data.answer == "required") {
+				alert(data.message);
+			} else if(data.answer == "error") {
+				alert(data.error);
+			}
 			// $.fancybox.close();
+		}, "json")
+		.done(function() {
+			console.log( "second success" );
+		})
+		.fail(function() {
+			console.log( "error" );
+		})
+		.always(function() {
+			console.log( "finished" );
 		});
 
-		alert("Сообщение успешно отправлено");
 		return false;
 	} );
 }//end_ func
@@ -294,123 +311,123 @@ function initForm()
 //== CallTouch
 function sendCallTouchData( e_vars )
 {
-    if ( typeof(e_vars)=="undefined" ) e_vars = [];
+	if ( typeof(e_vars)=="undefined" ) e_vars = [];
 
-    if ( typeof(e_vars["name"])=="undefined" ) e_vars["name"] = "";
-    if ( typeof(e_vars["phone"])=="undefined" ) e_vars["phone"] = "";
-    if ( typeof(e_vars["title"])=="undefined" ) e_vars["title"] = "";
-    if ( typeof(e_vars["calltouch_route_key"])=="undefined" ) e_vars["calltouch_route_key"] = "";
+	if ( typeof(e_vars["name"])=="undefined" ) e_vars["name"] = "";
+	if ( typeof(e_vars["phone"])=="undefined" ) e_vars["phone"] = "";
+	if ( typeof(e_vars["title"])=="undefined" ) e_vars["title"] = "";
+	if ( typeof(e_vars["calltouch_route_key"])=="undefined" ) e_vars["calltouch_route_key"] = "";
 
-    var l_result = {};
+	var l_result = {};
 
-    var l_phone = "";
-    var l_name  = "";
-    var l_title = "";
-    var l_calltouch_route_key = "undefined";
+	var l_phone = "";
+	var l_name  = "";
+	var l_title = "";
+	var l_calltouch_route_key = "undefined";
 
-    try
-    {
-        l_phone = e_vars["phone"];
-        l_name  = e_vars["name"];
-        l_title = e_vars["title"];
-        l_calltouch_route_key = e_vars["calltouch_route_key"];
+	try
+	{
+		l_phone = e_vars["phone"];
+		l_name  = e_vars["name"];
+		l_title = e_vars["title"];
+		l_calltouch_route_key = e_vars["calltouch_route_key"];
 
-        l_result.name = l_name;
-        l_result.phone = l_phone;
-        l_result.title = l_title;
-        l_result.calltouch_route_key = l_calltouch_route_key;
+		l_result.name = l_name;
+		l_result.phone = l_phone;
+		l_result.title = l_title;
+		l_result.calltouch_route_key = l_calltouch_route_key;
 
-        l_result.url = document.location.href;
-        l_result.referrer = document.referrer;
-        l_result.user_agent = window.navigator.userAgent;
+		l_result.url = document.location.href;
+		l_result.referrer = document.referrer;
+		l_result.user_agent = window.navigator.userAgent;
 
-        console.log( "sendCallTouchData", l_result );
+		console.log( "sendCallTouchData", l_result );
 
-        l_result.ya = [];
-        l_result.ga = [];
-        clientId = "";
-        trackingId = "";
+		l_result.ya = [];
+		l_result.ga = [];
+		clientId = "";
+		trackingId = "";
 
 
 	//Google
-        if ( typeof(ga)!="undefined" && typeof(ga)=="function" )
-        {
-            try
-            {
-                ga(function(tracker)
-                {
-                    if ( typeof(ga.getAll)=="function" )
-                    {
-                        //Ga list
-                        l_ga_list = ga.getAll();
+		if ( typeof(ga)!="undefined" && typeof(ga)=="function" )
+		{
+			try
+			{
+				ga(function(tracker)
+				{
+					if ( typeof(ga.getAll)=="function" )
+					{
+						//Ga list
+						l_ga_list = ga.getAll();
 
-                        if ( typeof(l_ga_list)=="object" && l_ga_list.length>0 )
-                        {
-                            for( l_key in l_ga_list )
-                            {
-                                l_ga = l_ga_list[l_key];
-                                clientId = l_ga.get('clientId');
-                                trackingId = l_ga.get('trackingId');
+						if ( typeof(l_ga_list)=="object" && l_ga_list.length>0 )
+						{
+							for( l_key in l_ga_list )
+							{
+								l_ga = l_ga_list[l_key];
+								clientId = l_ga.get('clientId');
+								trackingId = l_ga.get('trackingId');
 
-                                //new ga push
-                                l_ga_find = 0;
-                                for( l_temp_ga_key in l_result.ga )
-                                {
-                                    l_temp_ga_value = l_result.ga[l_temp_ga_key];
-                                    if ( l_temp_ga_value["trackingId"]==trackingId ) l_ga_find = 1;
-                                }//end_ for
-                                if ( l_ga_find!=1 )
-                                {
-                                    l_result.ga.push( {"type":"list","trackingId":trackingId, "clientId":clientId} );
-                                }//end_ if
-                            }//end_ for
-                            //!!OLD!!
-                            if ( l_ga_list.length>0 )
-                            {
-                                clientId = l_ga_list[0].get('clientId');
-                                trackingId = l_ga_list[0].get('trackingId');
-                            }//end_ if
-                        }//end_ if
-                    }//end_ if
-                    //!!OLD!!
-                    //l_result.push( {"trackingId":trackingId, "clientId":clientId} );
-                });
-            } catch (err)
-            {
+								//new ga push
+								l_ga_find = 0;
+								for( l_temp_ga_key in l_result.ga )
+								{
+									l_temp_ga_value = l_result.ga[l_temp_ga_key];
+									if ( l_temp_ga_value["trackingId"]==trackingId ) l_ga_find = 1;
+								}//end_ for
+								if ( l_ga_find!=1 )
+								{
+									l_result.ga.push( {"type":"list","trackingId":trackingId, "clientId":clientId} );
+								}//end_ if
+							}//end_ for
+							//!!OLD!!
+							if ( l_ga_list.length>0 )
+							{
+								clientId = l_ga_list[0].get('clientId');
+								trackingId = l_ga_list[0].get('trackingId');
+							}//end_ if
+						}//end_ if
+					}//end_ if
+					//!!OLD!!
+					//l_result.push( {"trackingId":trackingId, "clientId":clientId} );
+				});
+			} catch (err)
+			{
 
-                try
-                {
-                    clientId = tracker.get('clientId');
-                    trackingId = tracker.get('trackingId');
+				try
+				{
+					clientId = tracker.get('clientId');
+					trackingId = tracker.get('trackingId');
 
-                    //new ga push
-                    l_result.ga.push( {"type":"single","trackingId":trackingId, "clientId":clientId} );
-                } catch (err)
-                {
-                }
-            }//end_ try_ catch
-        }//end_ if
+					//new ga push
+					l_result.ga.push( {"type":"single","trackingId":trackingId, "clientId":clientId} );
+				} catch (err)
+				{
+				}
+			}//end_ try_ catch
+		}//end_ if
 
 
 	//Yandex
-        if ( typeof(Ya)!="undefined" && typeof(Ya)=="object" && typeof(Ya.Metrika)=="function" && typeof(Ya.Metrika.counters)=="function" )
-        {
-            l_ya_counters = Ya.Metrika.counters();
-            if ( typeof(l_ya_counters)=="object" && typeof(l_ya_counters.length)!="undefined" && l_ya_counters.length>0 )
-            {
-                for( var i=0; i<l_ya_counters.length; i++ )
-                {
-                    l_ya_counter = l_ya_counters[i];
-                    l_ya_counter_type = l_ya_counter.type;
-                    l_ya_counter_id   = l_ya_counter.id;
-                    l_ya_client_id = window["yaCounter"+l_ya_counter_id].getClientID();
-                    l_result.ya.push( {"type":l_ya_counter_type, "trackingId":l_ya_counter_id, "clientId":l_ya_client_id} );
-                }//end_ for_ i
-            }//end_ if
-        }//end_ if
-    } catch (err)
-    {
-    }
+		if ( typeof(Ya)!="undefined" && typeof(Ya)=="object" && typeof(Ya.Metrika)=="function" && typeof(Ya.Metrika.counters)=="function" )
+		{
+			l_ya_counters = Ya.Metrika.counters();
+			if ( typeof(l_ya_counters)=="object" && typeof(l_ya_counters.length)!="undefined" && l_ya_counters.length>0 )
+			{
+				for( var i=0; i<l_ya_counters.length; i++ )
+				{
+					l_ya_counter = l_ya_counters[i];
+					l_ya_counter_type = l_ya_counter.type;
+					l_ya_counter_id   = l_ya_counter.id;
+					l_ya_client_id = window["yaCounter"+l_ya_counter_id].getClientID();
+					l_result.ya.push( {"type":l_ya_counter_type, "trackingId":l_ya_counter_id, "clientId":l_ya_client_id} );
+				}//end_ for_ i
+			}//end_ if
+		}//end_ if
+	} catch (err)
+	{
+	}
 
 	//calltouch SessionId
 	l_result.calltouchSessionId = "";
@@ -423,13 +440,13 @@ function sendCallTouchData( e_vars )
 	}
 
 
-    //console.log( "[[[",l_result );
-    console.log( "[[[==",JSON.stringify(l_result) );
+	//console.log( "[[[",l_result );
+	console.log( "[[[==",JSON.stringify(l_result) );
 
-    $.post( "data/calltouch.php", {"data":JSON.stringify(l_result)}, function( data )
-    {
-        console.log( "CallTouch result:", data );
-    });
+	// $.post( "data/calltouch.php", {"data":JSON.stringify(l_result)}, function( data )
+	// {
+		// console.log( "CallTouch result:", data );
+	// });
 
 }//end_ func
 //== CallTouch
@@ -706,27 +723,27 @@ $( function()
 
 
 	// $(document).on("click", "a[href^='tel']", function () {
-    //     if (typeof (window.yaCounter93383415) != "undefined") {
-    //         if (typeof (window.ym) != "undefined") {
-    //             ym(93383415, 'reachGoal', 'clickphone');
-    //             console.log("[ym ok]");
-    //         } else {
-    //             yaCounter93383415.reachGoal('clickphone');
-    //             console.log("[yaCounter ok]");
-    //         }
-    //     }
-    // });
+	//     if (typeof (window.yaCounter93383415) != "undefined") {
+	//         if (typeof (window.ym) != "undefined") {
+	//             ym(93383415, 'reachGoal', 'clickphone');
+	//             console.log("[ym ok]");
+	//         } else {
+	//             yaCounter93383415.reachGoal('clickphone');
+	//             console.log("[yaCounter ok]");
+	//         }
+	//     }
+	// });
 
 	// $(document).on("click", ".popup", function () {
-    //     if (typeof (window.yaCounter93383415) != "undefined") {
-    //         if (typeof (window.ym) != "undefined") {
-    //             ym(93383415, 'reachGoal', 'openform');
-    //             console.log("[ym ok]");
-    //         } else {
-    //             yaCounter93383415.reachGoal('openform');
-    //             console.log("[yaCounter ok]");
-    //         }
-    //     }
-    // });
+	//     if (typeof (window.yaCounter93383415) != "undefined") {
+	//         if (typeof (window.ym) != "undefined") {
+	//             ym(93383415, 'reachGoal', 'openform');
+	//             console.log("[ym ok]");
+	//         } else {
+	//             yaCounter93383415.reachGoal('openform');
+	//             console.log("[yaCounter ok]");
+	//         }
+	//     }
+	// });
 
 } );
