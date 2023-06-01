@@ -345,8 +345,8 @@ function sendCallTouchData( e_vars )
 
 		l_result.ya = [];
 		l_result.ga = [];
-		clientId = "";
-		trackingId = "";
+		var clientId = "";
+		var trackingId = "";
 
 
 	//Google
@@ -359,7 +359,8 @@ function sendCallTouchData( e_vars )
 					if ( typeof(ga.getAll)=="function" )
 					{
 						//Ga list
-						l_ga_list = ga.getAll();
+						var l_ga_list = ga.getAll();
+
 
 						if ( typeof(l_ga_list)=="object" && l_ga_list.length>0 )
 						{
