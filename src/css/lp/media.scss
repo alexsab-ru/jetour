@@ -493,10 +493,10 @@
     .b1 {
         padding-top: 160px;
         height: 673px;
-        background: #77c3f9 url("../img/dashing/banner_mob.jpg") no-repeat;
+        background: #020309 url("/img/dashing/banner_mob.jpg") center bottom no-repeat;
         background-size: 100%;
-        background-size: cover;
-        background-position: 50% 40%;
+        // background-size: cover;
+        // background-position: 50% 40%;
     }
 
     .b1 .container {
@@ -1133,7 +1133,7 @@
 
     .car .wrap {
         padding: 20px 0;
-        background: #1e1e1e url("../img/car_wrap.png") right -70px top 126px no-repeat;
+        background: #1e1e1e url("/img/car_wrap.png") right -70px top 126px no-repeat;
         background-size: 80%;
     }
 
