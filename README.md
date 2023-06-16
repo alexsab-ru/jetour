@@ -1,7 +1,7 @@
-# jetour
+# jetour-krasnodar
 
 ```bash
-$ git clone https://github.com/alexsab-ru/jetour
+$ git clone https://github.com/alexsab-ru/jetour-krasnodar
 
 $ cd jetour
 
